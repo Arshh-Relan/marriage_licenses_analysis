@@ -1,0 +1,57 @@
+---
+title: "Marriage License Analysis"
+subtitle: "STA304 Week 3 Relefection Exercise"
+author: 
+  - Arshh Relan
+thanks: "Code and data are available at: https://github.com/Arshh-Relan/marriage_licenses_analysis"
+date: 19 September, 2024
+date-format: long
+abstract: "Analysing marriage license data for the previous year"
+format: pdf
+number-sections: true
+bibliography: references.bib
+---
+
+```{r}
+#| include: false
+#| warning: false
+#| message: false
+
+library(tidyverse)
+
+data <- read_csv(here::here("data/analysis_data/analysis_data.csv"))
+
+```
+
+
+# Introduction
+
+You can and should cross-reference sections and sub-sections. We use @talia, @opendatatorotno, and @rohan.
+
+The remainder of this paper is structured as follows. @sec-mydatasection
+
+
+
+# Data {#sec-mydatasection}
+
+Some of our data is of penguins (@fig-marriage), from @palmerpenguins.
+
+```{r}
+#| label: fig-marriage
+#| fig-cap: Marriage Licenses issued
+#| echo: false
+
+data |>
+  ggplot(aes(x = date, y = marriage_licenses)) +
+  geom_point() +
+  labs(title = "Marriage Licenses Issued",
+       x = "Year",
+       y = "Licenses")
+
+
+\newpage
+
+
+# References
+
+
