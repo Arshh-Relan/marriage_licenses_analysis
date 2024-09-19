@@ -47,7 +47,7 @@ data |>
   labs(title = "Marriage Licenses Issued",
        x = "Year",
        y = "Licenses")
-
+```
 
 \newpage
 
